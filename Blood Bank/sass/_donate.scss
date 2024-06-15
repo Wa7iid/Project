@@ -1,0 +1,115 @@
+// body {
+//     font-family: Arial, sans-serif;
+//     margin: 0;
+//     padding: 0;
+//     background-color: #f0f0f0;
+// }
+// .container {
+//     max-width: 800px;
+//     margin: 0 auto;
+//     padding: 20px;
+// }
+// form {
+//     background-color: #fff;
+//     padding: 20px;
+//     border-radius: 5px;
+//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+// }
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.don-btn {
+    background-color: #00adf1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    background-color: #00adf1;
+}
+.hospital-list {
+    margin-top: 20px;
+}
+.hospital {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+// pop up
+
+/* The popup container */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    z-index: 1;
+    animation: fadeIn 0.3s;
+}
+
+/* Popup content */
+.popup-content {
+    background: rgb(0,173,241);
+    background: linear-gradient(0deg, rgba(0,173,241,1) 0%, rgba(186,204,223,0.6218136912968313) 100%);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Close button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Button styling */
+.popupBtn {
+    background: rgb(0,173,241);
+    border: 0;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    // display: inline-block;
+    font-size: 16px;
+    margin: 4px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.popupBtn:hover {
+    background: rgb(0,173,241);
+    background: linear-gradient(0deg, rgba(0,173,241,1) 0%, rgba(186,204,223,0.6218136912968313) 100%);}

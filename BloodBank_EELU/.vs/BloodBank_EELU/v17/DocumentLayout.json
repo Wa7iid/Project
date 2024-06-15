@@ -1,0 +1,178 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|c:\\users\\mosta\\source\\repos\\bloodbank_eelu\\bloodbank_eelu\\controllers\\hospitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|solutionrelative:bloodbank_eelu\\controllers\\hospitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|c:\\users\\mosta\\source\\repos\\bloodbank_eelu\\bloodbank_eelu\\dtos\\hospitlreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|solutionrelative:bloodbank_eelu\\dtos\\hospitlreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|c:\\users\\mosta\\source\\repos\\bloodbank_eelu\\bloodbank_eelu\\dtos\\hospiatldonation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|solutionrelative:bloodbank_eelu\\dtos\\hospiatldonation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|c:\\users\\mosta\\source\\repos\\bloodbank_eelu\\bloodbank_eelu\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|solutionrelative:bloodbank_eelu\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|c:\\users\\mosta\\source\\repos\\bloodbank_eelu\\bloodbank_eelu\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|solutionrelative:bloodbank_eelu\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|c:\\users\\mosta\\source\\repos\\bloodbank_eelu\\bloodbank_eelu\\irepository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|solutionrelative:bloodbank_eelu\\irepository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|c:\\users\\mosta\\source\\repos\\bloodbank_eelu\\bloodbank_eelu\\models\\hospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|solutionrelative:bloodbank_eelu\\models\\hospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|c:\\users\\mosta\\source\\repos\\bloodbank_eelu\\bloodbank_eelu\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|solutionrelative:bloodbank_eelu\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|c:\\users\\mosta\\source\\repos\\bloodbank_eelu\\bloodbank_eelu\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94F4F348-5533-4911-99F9-F2006B661272}|BloodBank_EELU\\BloodBank_EELU.csproj|solutionrelative:bloodbank_eelu\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "BloodBank_EELU\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "BloodBank_EELU\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAYwCsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T12:30:37.754Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HospitlReturnDto.cs",
+              "DocumentMoniker": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Dtos\\HospitlReturnDto.cs",
+              "RelativeDocumentMoniker": "BloodBank_EELU\\Dtos\\HospitlReturnDto.cs",
+              "ToolTip": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Dtos\\HospitlReturnDto.cs",
+              "RelativeToolTip": "BloodBank_EELU\\Dtos\\HospitlReturnDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T12:11:27.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Models\\AppUser.cs",
+              "RelativeDocumentMoniker": "BloodBank_EELU\\Models\\AppUser.cs",
+              "ToolTip": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Models\\AppUser.cs",
+              "RelativeToolTip": "BloodBank_EELU\\Models\\AppUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T11:46:52.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HospitalController.cs",
+              "DocumentMoniker": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Controllers\\HospitalController.cs",
+              "RelativeDocumentMoniker": "BloodBank_EELU\\Controllers\\HospitalController.cs",
+              "ToolTip": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Controllers\\HospitalController.cs",
+              "RelativeToolTip": "BloodBank_EELU\\Controllers\\HospitalController.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAgwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T10:59:59.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\IRepository\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "BloodBank_EELU\\IRepository\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\IRepository\\IGenericRepository.cs",
+              "RelativeToolTip": "BloodBank_EELU\\IRepository\\IGenericRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T10:52:05.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Repository\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "BloodBank_EELU\\Repository\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Repository\\GenericRepository.cs",
+              "RelativeToolTip": "BloodBank_EELU\\Repository\\GenericRepository.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAUwHEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T10:51:57.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Hospital.cs",
+              "DocumentMoniker": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Models\\Hospital.cs",
+              "RelativeDocumentMoniker": "BloodBank_EELU\\Models\\Hospital.cs",
+              "ToolTip": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Models\\Hospital.cs",
+              "RelativeToolTip": "BloodBank_EELU\\Models\\Hospital.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T10:49:20.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HospiatlDonation.cs",
+              "DocumentMoniker": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Dtos\\HospiatlDonation.cs",
+              "RelativeDocumentMoniker": "BloodBank_EELU\\Dtos\\HospiatlDonation.cs",
+              "ToolTip": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Dtos\\HospiatlDonation.cs",
+              "RelativeToolTip": "BloodBank_EELU\\Dtos\\HospiatlDonation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T10:49:05.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "BloodBank_EELU\\Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\mosta\\source\\repos\\BloodBank_EELU\\BloodBank_EELU\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "BloodBank_EELU\\Controllers\\BaseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:44:33.095Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

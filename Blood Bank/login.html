@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blood Droplet</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="main.scss"/>
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/select2.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="main.css"/>
+
+        <style>
+          .login-cont{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin:60px auto;
+}
+
+.container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+.container .form{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.container.active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms{
+    height: 600px;
+}
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #4070f4;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}
+
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin-right: 10px;
+    accent-color: #4070f4;
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text{
+    color: #4070f4;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background-color: #265df2;
+}
+
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
+        </style>
+    </head>
+<body>
+  <nav class="first-nav" id="hamed">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 "></div>
+          <div class="col-lg-3 col-md-4 col-12"><i class="fa-solid fa-phone"></i> Telphone : +215 5713 87416</a></div>
+          <div class="col-lg-3 col-md-4 col-12">Location: Egypt</div>
+          <div class="col-lg-4 col-md-4 "></div>
+        </div>
+    </div>
+  </nav>
+
+        <!-- Show / Screen -->
+
+          <!-- end of showHide -->
+  
+  
+   <!-- end of leftside -->
+
+
+  <button class="scroll-btn"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+  <div class="login-cont container">
+    <div class="forms">
+        <div class="form login">
+            <span class="title">Login</span>
+
+            <form id="loginForm">
+                <div class="input-field">
+                    <input type="text" id="username" name="username" placeholder="Enter your Name" required>
+                    <i class="uil uil-envelope icon"></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number" required>
+                    <i class="uil uil-envelope icon"></i>
+                </div>
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <input type="checkbox" id="logCheck">
+                        <label for="logCheck" class="text">Remember me</label>
+                    </div>
+                </div>
+                <div class="input-field button">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+            <p id="message"></p>
+
+            <div class="login-signup">
+                <span class="text">Not a member?
+                    <a href="#" class="text signup-link">Signup Now</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form signup">
+            <span class="title">Registration</span>
+
+            <form id="registerForm">
+                <div class="input-field">
+                    <input type="text" id="username" name="username" placeholder="Enter your name" required>
+                    <i class="uil uil-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="bloodType" name="bloodType" placeholder="Enter your blood type" required>
+                    <i class="uil uil-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number" required>
+                    <i class="uil uil-envelope icon"></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                    <i class="uil uil-lock icon"></i>
+                </div>
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <input type="checkbox" id="termCon" required>
+                        <label for="termCon" class="text">I accept all terms and conditions</label>
+                    </div>
+                </div>
+                <div class="input-field button">
+                    <input type="submit" value="Signup">
+                </div>
+            </form>
+            <div id="message"></div>
+            <div class="login-signup">
+                <span class="text">Already a member?
+                    <a href="#" class="text login-link">Login Now</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer style="margin: 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-6 first-col">
+        <a class="navbar-brand" href="#"><img src="images/logo.jpg"> <span>Blood Droplet</span></a>
+        <p>Arrive at the blood donation center or blood drive location. Make sure you've eaten a healthy meal and are well-hydrated.</p>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-instagram"></i>
+         </div>
+      </div>
+      <div class="col-md-2 col-6 second-col"></div>
+      <div class="col-md-3 col-6 second-col">
+        <h5>Useful Links</h5>
+        <a href="about-us.html">About US</a>
+        <a href="our-services.html">Our Services</a>
+        <a href="our-team.html">Our Team</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="researches.html">Research</a>
+      </div>
+      <div class="col-md-3 col-6 second-col">
+        <h5>NEWS & BLOG</h5>
+        <a href="blogs.html">BLOGs</a>
+        <a href="blogs.html">News</a>
+        <a href="faqs.html">FAQs</a>
+      </div>
+    </div>
+  
+  </div>
+</footer>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector(".container"),
+          pwShowHide = document.querySelectorAll(".showHidePw"),
+          pwFields = document.querySelectorAll(".password"),
+          signUp = document.querySelector(".signup-link"),
+          login = document.querySelector(".login-link");
+
+    // JS code to show/hide password and change icon
+    pwShowHide.forEach(eyeIcon => {
+        eyeIcon.addEventListener("click", () => {
+            pwFields.forEach(pwField => {
+                if (pwField.type === "password") {
+                    pwField.type = "text";
+
+                    pwShowHide.forEach(icon => {
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    });
+                } else {
+                    pwField.type = "password";
+
+                    pwShowHide.forEach(icon => {
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    });
+                }
+            });
+        });
+    });
+
+    // JS code to toggle between signup and login forms
+    signUp.addEventListener("click", () => {
+        container.classList.add("active");
+    });
+
+    login.addEventListener("click", () => {
+        container.classList.remove("active");
+    });
+    
+        document.getElementById('registerForm').addEventListener('submit', async function (event) {
+
+
+            event.preventDefault();
+    
+            const username = document.getElementById('username').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const address = document.getElementById('address').value;
+            const bloodType = document.getElementById('bloodType').value;
+    
+            const data = {
+                userName: username,
+                phoneNumber: phoneNumber,
+                address: address,
+                bloodType: bloodType
+            };
+            
+            try {
+                const response = await fetch('https://localhost:5001/api/Account/Register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const messageElement = document.getElementById('message');
+
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.user) {
+                        messageElement.textContent = 'Registration successful!';
+                        messageElement.style.color = 'green';
+                    } else {
+                        messageElement.textContent = 'Registration successful!';
+                        messageElement.style.color = 'green';
+                    }
+                    window.location.href = 'startup.html';
+                } else {
+                    const errorJson = await response.json();
+                    messageElement.textContent = 'Error: ' + (errorJson.message || 'Unknown error');
+                    messageElement.style.color = 'red';
+                }
+            } catch (error) {
+                document.getElementById('message').textContent = 'An error occurred: ' + error.message;
+                document.getElementById('message').style.color = 'red';
+            }
+       
+       
+
+
+       
+        });
+        document.getElementById('loginForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+        
+            const username = document.getElementById('username').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+        
+            const data = {
+                userName: username,
+                phoneNumber: phoneNumber
+            };
+        
+            try {
+                const response = await fetch('https://localhost:5001/api/Account/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+        
+                const messageElement = document.getElementById('message');
+        
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result) {
+                        messageElement.textContent = 'Login successful!';
+                        messageElement.style.color = 'green';
+                        // Redirect to a different page after successful login, if needed
+                        window.location.href = 'startup.html';
+                    } else {
+                        messageElement.textContent = 'Login failed!';
+                        messageElement.style.color = 'red';
+                    }
+                } else if (response.status === 401) {
+                    messageElement.textContent = 'Unauthorized: Incorrect phone number or user does not exist.';
+                    messageElement.style.color = 'red';
+                } else {
+                    const errorJson = await response.json();
+                    messageElement.textContent = 'Error: ' + (errorJson.message || 'Unknown error');
+                    messageElement.style.color = 'red';
+                }
+            } catch (error) {
+                document.getElementById('message').textContent = 'An error occurred: ' + error.message;
+                document.getElementById('message').style.color = 'red';
+            }
+        });
+
+        
+        
+    });
+
+    </script>
+</body>
+</html>
+
+
+
+
