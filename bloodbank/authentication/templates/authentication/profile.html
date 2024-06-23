@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      {% include 'widgets/style-head.html' %}
+      <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #00adf1;
+            color: #fff;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+      </style>
+    </head>
+<body>
+{% include 'widgets/navbar.html' %}
+    <button class="scroll-btn"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card mb-4">
+        <div class="card-body text-center">
+          <img {% if not user.image_url %}
+            src="{% static 'images/no_profile_image.webp' %}"
+            {% else %}
+            src="{{user.image_url}}"
+            {% endif %}
+            alt="avatar" class="rounded-circle img-fluid" style="width: 150px; height: 150px;" />
+
+          <h5 class="my-3">{{user.name}}</h5>
+          <div class="d-flex justify-content-center mb-2">
+            <a href="{% url 'edit_profile' %}" type="button" class="btn btn-primary">Edit Profile <i class="fa-solid fa-user-pen"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Name</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0">{{user.name}}</p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Email</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0">{{user.email}}</p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Phone</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0">{{user.phone}}</p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Blood Type</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0">{{user.blood_type}}</p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Last Donate</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0">{{last_donate}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pe-0">
+      <div class="col-md-12 pe-0">
+        <div class="card mb-4 mb-md-0">
+          <div class="card-body">
+            <div class="text-primary font-italic mb-2"><h4>Your Donations</h4></div>
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Hospital</th>
+                  <th>Blood Type</th>
+                  <th>Donation Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% if user_donations %}
+                  {% for donation in user_donations %}
+                  <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ donation.hospital }}</td>
+                    <td>{{ donation.blood_type }}</td>
+                    <td>{{ donation.created_at|date:"Y-m-d" }}</td>
+                    {% if donation.is_done %}
+                    <td><h3 class="text-success">Donated</h3></td>
+                    {% else %}
+                    <td>
+                      <form method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="complete_id" value="{{ donation.id }}">
+                        <button class="btn btn-primary">Complete Donate</button>
+                      </form>
+                    </td>
+                    {% endif %}
+                  </tr>
+                  {% endfor %}
+                {% else %}
+                  <tr>
+                    <td colspan="5" style="text-align: center;">No donations found.</td>
+                  </tr>
+                {% endif %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'widgets/footer.html' %}
+{% include 'widgets/script-body.html' %}
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!-- authentication/templates/authentication/auth.html -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Login and Registration Form</title>
+  <link rel="stylesheet" href="{% static 'authentication/css/style.css' %}">
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id="favicon" rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="{% static 'images/login.webp' %}" alt="">
+        <div class="text">
+          <span class="text-1">Blood Droplet <br></span>
+          <span class="text-2">We save lives</span>
+        </div>
+      </div>
+      <div class="back">
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-2">Let's get started</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+      <div class="form-content">
+        <div class="login-form">
+          <div class="title">Login</div>
+          <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="Login"> <!-- Set action for login -->
+            <div class="input-boxes">
+              {% if login_error_msg %}
+              <p style="color: red;">{{ login_error_msg }}</p>
+              {% endif %}
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                {{ login_form.username }}
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                {{ login_form.password }}
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="LOGIN">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
+            </div>
+          </form>
+        </div>
+        <div class="signup-form">
+          <div class="title">Signup</div>
+          <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="Signup"> <!-- Set action for signup -->
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                {{ register_form.name }}
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                {{ register_form.email }}
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                {{ register_form.password1 }}
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                {{ register_form.password2 }}
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="SIGN UP">
+              </div>
+              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

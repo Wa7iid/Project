@@ -1,0 +1,288 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include 'widgets/style-head.html' %}
+    </head>
+<body>
+{% include 'widgets/navbar.html' %}
+  <button class="scroll-btn"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <div class="about-us">
+    <img src="{% static 'images/aboutUs.jpg' %}">
+    <h4 class="abs-h4">ABOUT US</h4>
+    <h5 class="abs-h5">Drop Let / <span>About us</span></h5>
+
+    <div class="container about-container">
+      <div class="row">
+        <div class="col-md-6 col-12 left-side">
+          <h3>ABOUT US WE ARE <span>THE TRUSTED EXPERTS</span></h3>
+          <p class="st-p">our mission is clear to bridge the gap between blood donors and those in need. We strive to create awareness about the importance of regular blood donation and ensure a steady supply of safe blood for medical emergencies, surgeries, and treatments.</p>
+          <p class="sec-p">Every drop of blood donated represents hope, strength, and life. We are driven by the belief that together, we can make a significant impact on healthcare outcomes and improve the quality of life for countless individuals. Whether it's a patient fighting a critical illness or an accident victim in urgent need, we stand committed to being a lifeline for those in distress.</p>
+          <img src="{% static 'images/about03.jpg' %}">
+        </div>
+        <div class="col-md-6 col-12 right-side">
+          <img src="{% static 'images/about02.jpg' %}">
+          <div class="content">
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+                  <h4>HOURS & PRICING</h4>
+                  <p>We look forward to seeing you!</p>
+                </div>
+                <div class="col-6">
+                  <button class="maBtn">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>ABOUT US WE ARE <span>THE TRUSTED EXPERTS</span></h3>
+          <p class="st-p">Laboratories used for scientific research take many forms because of the differing requirements of specialists.</p>
+          <p class="sec-p">Laboratories used for scientific research take many forms because of the differing requirements of specialists in the various fields of science and engineering.</p>
+          <!-- start count stats -->
+
+<section id="counter-stats" class="wow fadeInRight" data-wow-duration="1.4s">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-lg-3 stats">
+				<div class="counting" data-count="{{ hospital }}">0</div>
+				<h5>Hospitals</h5>
+			</div>
+
+			<div class="col-lg-3 stats">
+				<div class="counting" data-count="{{ donation }}">0</div>
+				<h5>Donations</h5>
+			</div>
+
+			<div class="col-lg-3 stats">
+				<div class="counting" data-count="8">0</div>
+				<h5>Blood Types</h5>
+			</div>
+
+
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end container -->
+
+</section>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="trusted">
+    <div class="container">
+      <h2>ABOUT US WE ARE <span>THE TRUSTED EXPERTS</span></h2>
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <i class="fa-solid fa-flask"></i>
+          <h5>BLOOD BANK & CHEMISTRY</h5>
+          <p>Laboratories used for scientific research nursing Implications.</p>
+        </div>
+        
+        <div class="col-md-4 col-12">
+          <i class="fa-solid fa-vial-virus"></i>
+          <h5>COAGULATION & CYTOLOGY</h5>
+          <p>Laboratories used for scientific research nursing Implications.</p>
+        </div>
+        <div class="col-md-4 col-12">
+          <i class="fa-solid fa-flask-vial"></i>
+          <h5>SCIENTIFIC RESEARCH</h5>
+          <p>Laboratories used for scientific research nursing Implications.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h2 class="pbmit-title">Our <strong>EXPERT TEAM</strong></h2>
+        </div>
+        <div class="col-md-9">
+          <div class="about-us-team_single">
+            <div class="row">
+              <div class="col-lg-4">
+                <article class="pbmit-teambox-style-4">
+                  <div class="pbminfotech-post-item">
+                    <div class="pbminfotech-team-image-box pbmit-bgcolor-skincolor">
+                      <span class="pbminfotech-item-thumbnail">
+                        <span class="pbminfotech-item-thumbnail-inner">
+                          <img src="{% static 'images/team-01.jpg' %}" class="img-fluid" alt="">
+                        </span>
+                      </span>			
+                      <div class="pbminfotech-box-content">
+                        <div class="pbminfotech-box-desc">
+                          <div class="pbminfotech-box-title">
+                            <h4><a title="Samantha Wood" href="our-team.html">Samantha Wood</a></h4>
+                          </div>
+                          <div class="pbminfotech-box-team-position">Laboratory Technician</div>
+                          <div class="pbminfotech-box-social-links">
+                            <div class="pbmit-team-social-links-wrapper">
+                              <ul class="pbmit-team-social-links">
+                                <li>
+                                  <a title="Twitter" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-twitter"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a title="Facebook" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-facebook"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a title="Google+" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-google-plus-g"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a title="LinkedIn" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                  </a>
+                                </li>
+                              </ul> 
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <article class="pbmit-teambox-style-4">
+                  <div class="pbminfotech-post-item">
+                    <div class="pbminfotech-team-image-box pbmit-bgcolor-skincolor">
+                      <span class="pbminfotech-item-thumbnail">
+                        <span class="pbminfotech-item-thumbnail-inner">
+                          <img src="{% static 'images/team-02.jpg' %}" class="img-fluid" alt="">
+                        </span>
+                      </span>			
+                      <div class="pbminfotech-box-content">
+                        <div class="pbminfotech-box-desc">
+                          <div class="pbminfotech-box-title">
+                            <h4><a title="Samantha Wood" href="our-team.html">ALEX MITCHELL</a></h4>
+                          </div>
+                          <div class="pbminfotech-box-team-position">HEAD MICROBIOLOGIST</div>
+                          <div class="pbminfotech-box-social-links">
+                            <div class="pbmit-team-social-links-wrapper">
+                              <ul class="pbmit-team-social-links">
+                                <li>
+                                  <a title="Twitter" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-twitter"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a title="Facebook" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-facebook"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a title="Google+" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-google-plus-g"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a title="LinkedIn" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                  </a>
+                                </li>
+                              </ul> 
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <article class="pbmit-teambox-style-4">
+                  <div class="pbminfotech-post-item">
+                    <div class="pbminfotech-team-image-box pbmit-bgcolor-skincolor">
+                      <span class="pbminfotech-item-thumbnail">
+                        <span class="pbminfotech-item-thumbnail-inner">
+                          <img src="{% static 'images/team-03.jpg' %}" class="img-fluid" alt="">
+                        </span>
+                      </span>			
+                      <div class="pbminfotech-box-content">
+                        <div class="pbminfotech-box-desc">
+                          <div class="pbminfotech-box-title">
+                            <h4><a title="Samantha Wood" href="our-team.html">MATTHEW ATKINS</a></h4>
+                          </div>
+                          <div class="pbminfotech-box-team-position">SENIOR РATHOLOGIST</div>
+                          <div class="pbminfotech-box-social-links">
+                            <div class="pbmit-team-social-links-wrapper">
+                              <ul class="pbmit-team-social-links">
+                                <li>
+                                  <a title="Twitter" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-twitter"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a title="Facebook" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-facebook"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a title="Google+" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-google-plus-g"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a title="LinkedIn" href="#" target="_blank" class="">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="skills">
+            <div class="skills">
+                  <div class="row">
+                    <div class="col-md-4 col-12">
+                      <div data-label="BIOTECHNOLOGY" data-level="85" class="chart"><span></span><p></p></div>
+                      <h6>LabtechCO is a medical testing laboratory service that offers a complete range of tests for diagnosis, screening or evaluation.</h6>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <div data-label="VACCINES" data-level="67" class="chart"><span></span><p></p></div>
+                      <h6>LabtechCO is a medical testing laboratory service that offers a complete range of tests for diagnosis, screening or evaluation.</h6>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <div data-label="MEDICAL RESEARCH" data-level="92" class="chart"><span></span><p></p></div>
+                      <h6>LabtechCO is a medical testing laboratory service that offers a complete range of tests for diagnosis, screening or evaluation.</h6>
+                    </div>
+                  </div>          
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+{% include 'widgets/trusted.html' %}
+{% include 'widgets/footer.html' %}
+{% include 'widgets/script-body.html' %}
+</body>
+</html>
+
+
+
+

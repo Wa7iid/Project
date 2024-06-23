@@ -1,0 +1,32 @@
+{% load static %}
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-6 first-col">
+          <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo.jpg' %}"> <span>Blood Droplet</span></a>
+          <p>Arrive at the blood donation center or blood drive location. Make sure you've eaten a healthy meal and are well-hydrated.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2 col-6 second-col"></div>
+        <div class="col-md-3 col-6 second-col">
+          <h5>Useful Links</h5>
+          <a href="{% url 'about-us' %}">About US</a>
+          <a href="#">Our Services</a>
+          <a href="#">Our Team</a>
+          <a href="{% url 'contact-us' %}">Contacts</a>
+          <a href="{% url 'reaserches' %}">Informations</a>
+        </div>
+        <div class="col-md-3 col-6 second-col">
+          <h5>NEWS & BLOG</h5>
+          <a href="#">BLOGs</a>
+          <a href="#">News</a>
+          <a href="#">FAQs</a>
+        </div>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      {% include 'widgets/style-head.html' %}
+    </head>
+<body>
+{% include 'widgets/navbar.html' %}
+    <button class="scroll-btn"><i class="fa-solid fa-arrow-up"></i></button>
+
+ <section id="home" class="home">
+   
+  <div class="swiper home-slider">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide slide" style="background: url('static/images/lab.2.png')">
+        <div class="content">
+          <h3>Donate Blood, Save Life !</h3>   
+        </div>
+      </div>
+      
+            
+      <div class="swiper-slide slide" style="background: url('static/images/lab.3.jpg')">
+        <div class="content">
+          <h3>Donate Blood, Save Life !</h3>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    
+  </div>  
+  
+</section>
+
+
+
+<div class="home-tail">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-12 blue-sec">
+        <h4>Patients Area</h4>
+        <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward.</p>
+        <button class="maBtn">More details <i class="fa-solid fa-caret-right"></i></button>
+      </div>
+      <div class="col-lg-3 col-12 blue-sec">
+        <h4>Patients Area</h4>
+        <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward.</p>
+        <button class="maBtn">More details <i class="fa-solid fa-caret-right"></i></button>
+      </div>
+      <div class="col-lg-3 col-12 grey-sec">
+        <h4>Opening Hours</h4>
+        <div class="wpb_wrapper">
+          <ul>
+              <li class="clearfix">
+                <div style="float: left">Sunday&nbsp; – Thursday</div>
+                <div style="float: right;">9.00-11.00</div>
+              </li>
+              <li class="clearfix">
+                <div style="float: left;">Friday</div>
+                <div style="float: right;">&nbsp; Closed</div>
+              </li>
+              <li class="clearfix">
+                <div style="float: left;">saturday</div>
+                <div style="float: right;">&nbsp;9.00-11.00</div>
+              </li>
+         </ul>
+    
+        </div>
+      </div>
+      <div class="col-lg-3 col-12 grey-sec">
+        <h4>Our Coverage Area</h4>
+        <img src="{% static 'images/map.jpg' %}">
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="how-works">
+    <h2>How it works</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-12 el">
+          <img src="{% static 'images/how-works01.png' %}" alt="">
+          <h3>Get Your Results in 1h</h3>
+          <p>Capitalise on low hanging fruit to identify a ballpark value added activity to beta test.
+             Override the digital divide with additional click.</p>
+        </div>
+        <div class="col-md-4 col-12 el">
+          <img src="{% static 'images/how-works02.png' %}" alt="">
+          <h3>Helpful Test Tips</h3>
+          <p>Capitalise on low hanging fruit to identify a ballpark value added activity to beta test.
+             Override the digital divide with additional click.</p>
+        </div>
+        <div class="col-md-4 col-12 el">
+          <img src="{% static 'images/how-works03.png' %}" alt="">
+          <h3>Tests at Home</h3>
+          <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+
+
+  <div class="call-us">
+    <div class="container">
+      <div class="row">
+        <h4>TIME TO GET STARTED</h4>
+        <h2>Stay Healthy With Us.</h2>
+        <p>All diagnostics is performed in laboratories with an implemented Quality System.</p>
+        
+        <a style="margin: 10px auto; text-align: center;" class="nav-link" href="{% url 'donate_blood' %}"><button class="btn">Donate</button></a>
+        <a style="margin: 10px auto; text-align: center;" class="nav-link" href="{% url 'get_blood' %}"><button style="background-color: #ff8a5b;" class="btn">Search for blood</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="researches">
+    <h2>Informations</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-6">
+          <div class="element">
+            <img src="{% static 'images/reaserches/research-05.jpg' %}">
+            <h6>Donating</h6>
+            <h5>Donating brings hope and dignity</h5>
+          </div>
+        </div>
+        <div class="col-md-4 col-6">
+          <div class="element">
+            <img src="{% static 'images/reaserches/research-06.jpg' %}">
+            <h6>LIFE SAVE</h6>
+            <h5>Your donation can change lives</h5>
+          </div>
+        </div>
+        <div class="col-md-4 col-6">
+          <div class="element">
+            <img src="{% static 'images/reaserches/research-07.jpg' %}">
+            <h6>HUMANITY</h6>
+            <h5>Donating reflects our shared humanity</h5>
+          </div>
+        </div>
+      </div>
+      <a href="{% url 'reaserches' %}"><button class="maBtnDark">More Informations <i class="fa-solid fa-caret-right"></i></button></a>
+    </div>
+  </div>
+  
+  
+
+
+  {% include 'widgets/footer.html' %}
+  {% include 'widgets/script-body.html' %}
+</body>
+</html>

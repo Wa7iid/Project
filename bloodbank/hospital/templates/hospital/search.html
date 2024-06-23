@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      {% include 'widgets/style-head.html' %}
+
+        <style>
+          /* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: #00adf1;
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #00adf1;
+}
+.form button:hover {
+  background: #00adf1;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+        </style>
+    </head>
+<body>
+{% include 'widgets/navbar.html' %}
+  <button class="scroll-btn"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <section class="container">
+    <form id="donation-form" class="form" method="post">
+      <head><h2>Search For Blood</h2></head>
+      {% csrf_token %}
+      <div class="input-box">
+          <div class="column">
+              <div class="select-box">
+                  <select id="blood_type" name="blood_type" required>
+                      <option value="" disabled selected hidden>Select Blood Type</option>
+                      <option value="A+">A+</option>
+                      <option value="A-">A-</option>
+                      <option value="B+">B+</option>
+                      <option value="B-">B-</option>
+                      <option value="AB+">AB+</option>
+                      <option value="AB-">AB-</option>
+                      <option value="O+">O+</option>
+                      <option value="O-">O-</option>
+                  </select>
+              </div>
+          </div>
+          <button type="submit">Search For Blood</button>
+      </div>
+  </form>  
+</section>
+
+<!-- Your navigation and other HTML structure -->
+
+<div class="container">
+  <hr style="margin: 10px auto ;">
+  {% if hospitals %}
+  <h3 style="text-align: center; margin: 15px auto 35px;">Click to find the Hospital location on maps!</h3>
+  <div class="row">
+    {% for hos in hospitals %}
+        <div class="col-lg-6">
+          <button class="popupBtn" 
+                  data-name="{{ hos.hospital.name }}"
+                  data-phone="{{ hos.hospital.phone }}"
+                  data-map="{{ hos.hospital.map_url }}">
+            {{ hos.hospital.name }}
+          </button>
+        </div>
+    {% endfor %}    
+  </div>
+  {% else %}
+  <h3 style="text-align: center; margin: 15px auto 35px;">No Search Results Found</h3>
+  {% endif %}
+</div>
+
+<!-- Popup -->
+<div id="myPopup" class="popup">
+  <div class="popup-content">
+      <span class="close" id="closeBtn">&times;</span>
+      <p id="popup-name" style="font-size: 24px;"></p>
+      <h6><span style="color: #00adf1; font-size: 16px; margin-right: 10px; font-weight: 500;">Phone number:</span> <span id="popup-phone"></span></h6>
+      <iframe id="popup-map" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- <div class="row">
+        <div class="col-lg-6">
+          <button style="background-color: green;" class="btn btn-success">DONATE</button>
+        </div>
+        <div class="col-lg-6">
+          <button style="background-color: red;" class="btn btn-success">REQUEST</button>
+        </div>
+      </div> -->
+  </div>
+</div>
+
+<script>
+  // Get the popup element and close button
+  var popup = document.getElementById("myPopup");
+  var closeBtn = document.getElementById("closeBtn");
+
+  // Function to open the popup with dynamic content
+  function openPopup(name, phone, mapUrl) {
+      document.getElementById("popup-name").textContent = name;
+      document.getElementById("popup-phone").textContent = phone;
+      document.getElementById("popup-map").src = mapUrl;
+      popup.style.display = "block";
+  }
+
+  // Close the popup when the close button is clicked
+  closeBtn.onclick = function() {
+      popup.style.display = "none";
+  }
+
+  // Close the popup when clicking outside of it
+  window.onclick = function(event) {
+      if (event.target == popup) {
+          popup.style.display = "none";
+      }
+  }
+
+  // Add click event listeners to all hospital buttons
+  document.querySelectorAll(".popupBtn").forEach(function(button) {
+      button.addEventListener("click", function() {
+          var name = this.getAttribute("data-name");
+          var phone = this.getAttribute("data-phone");
+          var mapUrl = this.getAttribute("data-map");
+          openPopup(name, phone, mapUrl);
+      });
+  });
+</script>
+<script>
+  document.getElementById('donation-form').addEventListener('submit', function(event) {
+      var bloodType = document.getElementById('blood_type').value;
+      if (bloodType === '') {
+          // Prevent form submission
+          event.preventDefault();
+          // Optionally, display an error message to the user
+          alert('Please select a blood type.');
+      }
+  });
+</script>
+    
+
+
+
+{% include 'widgets/trusted.html' %}
+{% include 'widgets/footer.html' %}
+{% include 'widgets/script-body.html' %}
+</body>
+</html>
+
+
+
+
