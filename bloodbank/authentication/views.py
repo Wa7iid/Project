@@ -50,9 +50,9 @@ def logout_view(request):
 @login_required
 def profile(request):
     user_donations = DonationRequest.objects.filter(user=request.user).order_by('-id')
-    last_donate  = user_donations.filter(is_done = True).first().updated_at
+    last_donate  = user_donations.filter(is_done = True).first()
     if last_donate:
-        last_donate = last_donate.created_at
+        last_donate = last_donate.updated_at
     else:
         last_donate = "You Dont have Donations"
     if request.method == 'POST':
@@ -60,6 +60,12 @@ def profile(request):
         confirmed = get_object_or_404(DonationRequest, id=complete_id)
         confirmed.is_done = True
         confirmed.save()
+        user_donations = DonationRequest.objects.filter(user=request.user).order_by('-id')
+        last_donate  = user_donations.filter(is_done = True).first()
+        if last_donate:
+            last_donate = last_donate.updated_at
+        else:
+            last_donate = "You Dont have Donations"
         return render(request, 'authentication/profile.html', {'user_donations': user_donations, 'last_donate': last_donate})
     return render(request, 'authentication/profile.html', {'user_donations': user_donations, 'last_donate': last_donate})
 
