@@ -50,7 +50,7 @@ def logout_view(request):
 @login_required
 def profile(request):
     user_donations = DonationRequest.objects.filter(user=request.user).order_by('-id')
-    last_donate  = user_donations.first().created_at
+    last_donate  = user_donations.filter(is_done = True).first()
     if last_donate:
         last_donate = last_donate.created_at
     else:
