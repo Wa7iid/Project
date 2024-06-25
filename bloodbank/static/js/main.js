@@ -1,14 +1,14 @@
 // Scrolling btn
 let scrollBtn = document.querySelector(".scroll-btn");
 
-window.onscroll = function () {
-  if (window.scrollY >= 500) {
-    scrollBtn.style.display = "block";
-  }
-  else {
-    scrollBtn.style.display = "none"
-  }
-}
+// window.onscroll = function () {
+//   if (window.scrollY >= 500) {
+//     scrollBtn.style.display = "block";
+//   }
+//   else {
+//     scrollBtn.style.display = "none"
+//   }
+// }
 
 scrollBtn.onclick = function () {
   window.scrollTo({

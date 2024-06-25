@@ -4,3 +4,17 @@
 <script src="https://fastly.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="{% static 'js/select2.min.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+<script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '667ad6dd74352953f7be5b4f' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production'
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+  
