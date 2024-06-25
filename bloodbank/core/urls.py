@@ -19,6 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from hospital.views import index, SearchBlood, about, contact, reaserches, DonateBlood
+from hospital.api.views import contact_api_view
 
 urlpatterns = [
     path('', index, name='home'),
@@ -30,6 +31,7 @@ urlpatterns = [
 
     path('about-us/', about, name='about-us'),
     path('contact-us/', contact, name='contact-us'),
+    path('api/contact-us/mail/', contact_api_view, name='api-contact-us-mail'),
     path('informations/', reaserches, name='reaserches'),
 ]
 

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from hospital.models import BloodType, Hospital, Inventory, DonationRequest
+from hospital.models import BloodType, Hospital, Inventory, DonationRequest, Contact
 from authentication.models import BaseUser
 
 class BaseUserSerializer(serializers.ModelSerializer):
@@ -28,3 +28,9 @@ class DonationRequestSerializer(serializers.ModelSerializer):
         model = DonationRequest
         fields = ['id', 'blood_type', 'user', 'hospital', 'hosbital_id', 'user_id']
 
+
+class ContactSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Contact
+        fields = '__all__'

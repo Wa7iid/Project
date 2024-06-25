@@ -35,3 +35,30 @@ class DonateRequest(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 
+
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from django.core.mail import send_mail
+from django.conf import settings
+from .serializers import ContactSerializer
+
+@api_view(['POST'])
+def contact_api_view(request):
+    if request.method == 'POST':
+        serializer = ContactSerializer(data=request.data)
+        if serializer.is_valid():
+            contact = serializer.save()
+
+            # Send confirmation email to the user
+            send_mail(
+                'Thank you for contacting us',
+                f"Dear {contact.name},\n\n"
+                f"Thank you for reaching out to us. We have received your message and will get back to you shortly.\n\n"
+                f"Best regards,\nBlood Bank Team",
+                settings.DEFAULT_FROM_EMAIL,
+                [contact.email],
+                fail_silently=False,
+            )
+
+            return Response({'success': 'Message sent successfully'}, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

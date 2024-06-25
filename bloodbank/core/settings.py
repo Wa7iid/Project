@@ -146,3 +146,14 @@ LOGIN_URL = '/auth/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+# # to send email via gmail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  # For TLS
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'madboost.customer@gmail.com'
+EMAIL_HOST_PASSWORD = 'wpmj llfn toax sfil'
+DEFAULT_FROM_EMAIL = 'madboost.customer@gmail.com'
